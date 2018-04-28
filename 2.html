@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:600" rel="stylesheet" type='text/css'>
+    <link rel="stylesheet" type="text/css" href="assets/css/style2.css">
+    <link rel="stylesheet" type="text/css" href="assets/js/jquery.fullPage.css"/>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="assets/js/jquery.easings.min.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.fullPage.js"></script>
+    <script src="assets/js/script2.js"></script>
+
+
+    <script type="text/javascript">
+      // jQuery Function Number #2
+        $(document).ready(function() {
+            $('#fullpage').fullpage({
+                sectionsColor: ['#f8f8f8', '#e5f1ff', '#b4d6ed']
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="fullpage">
+        <div class="section"> 
+            <div class="container">
+                <div class="mySlides">
+                    <div class="numbertext">1 / 6</div>
+                         <img src="assets/img/1.jpeg" style="width:100%">
+                </div>
+                <div class="mySlides">
+                    <div class="numbertext">2 / 6</div>
+                         <img src="assets/img/2.jpeg" style="width:100%">
+                </div>
+                <div class="mySlides">
+                    <div class="numbertext">3 / 6</div>
+                         <img src="assets/img/3.jpeg" style="width:100%">
+                </div>
+                <div class="mySlides">
+                    <div class="numbertext">4 / 6</div>
+                         <img src="assets/img/4.jpeg" style="width:100%">
+                </div>
+                <div class="mySlides">
+                    <div class="numbertext">5 / 6</div>
+                         <img src="assets/img/5.jpeg" style="width:100%">
+                </div>
+                <div class="mySlides">
+                    <div class="numbertext">6 / 6</div>
+                         <img src="assets/img/6.jpeg" style="width:100%">
+                </div>
+
+
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+
+                <div class="caption-container">
+                <p id="caption">This photo is about</p>
+                </div>
+
+  
+                <div class="row">
+                    <div class="column">
+                        <img class="demo cursor" src="assets/img/1.jpeg" style="width:100%" onclick="currentSlide(1)" alt="Literature Magazine Logo">
+                    </div>
+                    <div class="column"> 
+                        <img class="demo cursor" src="assets/img/2.jpeg" style="width:100%" onclick="currentSlide(2)" alt="UC Berkeley Logo">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="assets/img/3.jpeg" style="width:100%" onclick="currentSlide(3)" alt="Christine's Photoshop Logo">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="assets/img/4.jpeg" style="width:100%" onclick="currentSlide(4)" alt="International Student Zone Logo">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="assets/img/5.jpeg" style="width:100%" onclick="currentSlide(5)" alt="Nutritient Company Logo">
+                    </div> 
+                    <div class="column">
+                        <img class="demo cursor" src="assets/img/6.jpeg" style="width:100%" onclick="currentSlide(6)" alt="Student Council Logo">
+                    </div>
+                </div>
+            </div>
+<script>
+// jQuery Function Number #3
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+        </script>
+    </div>
+        <div class="section">
+        </div>
+        <div class="section">
+        </div>
+    </div>     
+    <a href="index.html"><div id="title">Christine  Joung</div></a>
+    <div id="main-container">
+        <div id="city-link-container">
+            <a href="../view1/index.html#"><div class="city-link">Home</div></a>
+            <a href="../view3/index.html#"><div class="city-link">Things I Love</div></a>
+            <a href="../view2/index.html#"><div class="city-link-project">Things I Do</div>
+            </a>       
+</body> 
+</html>
